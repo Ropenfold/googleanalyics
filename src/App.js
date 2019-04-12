@@ -9,6 +9,14 @@ function initializeReactGA() {
 }
 
 class App extends Component {
+  onButtonClick = () => {
+    console.log("button pressed");
+    ReactGA.event({
+      category: "buttonpressing",
+      action: "Pressed THE button"
+    });
+  };
+
   render() {
     return (
       <div className="App">
@@ -25,6 +33,7 @@ class App extends Component {
           >
             Learn React
           </a>
+          <button onClick={this.onButtonClick}>press for event</button>
         </header>
       </div>
     );
