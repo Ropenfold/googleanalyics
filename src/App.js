@@ -11,10 +11,10 @@ function initializeReactGA() {
 class App extends Component {
   onButtonClick = () => {
     console.log("button pressed");
-    // ReactGA.event({
-    //   category: "buttonpressing",
-    //   action: "Pressed THE button"
-    // });
+    ReactGA.event({
+      category: "buttonpressing",
+      action: "Pressed THE button"
+    });
   };
 
   render() {
